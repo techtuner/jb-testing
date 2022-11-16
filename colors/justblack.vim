@@ -58,13 +58,13 @@ call s:GuiFor('Normal','None', s:foreground)
 " --------------------------------------------------
 " Keywords, constants, template literals, pink
 " --------------------------------------------------
-call s:GuiFor('Constant', 'NONE', s:pink)
-call s:GuiFor('Keyword', 'NONE', s:pink)
+call s:GuiFor('Constant', 'NONE', s:cyan)
+call s:GuiFor('Keyword', 'NONE', s:blue)
 call s:GuiFor('Number', 'NONE', s:yellow)
-call s:GuiFor('Repeat', 'NONE', s:pink)
+call s:GuiFor('Repeat', 'NONE', s:orange)
 call s:GuiFor('Special', 'NONE', s:pink)
 call s:GuiFor('SpecialKey', 'NONE', s:pink)
-call s:GuiFor('Statement', 'NONE', s:pink)
+call s:GuiFor('Statement', 'NONE', s:white)
 call s:GuiFor('Tag', 'NONE', s:pink)
 call s:GuiFor('Type', 'NONE', s:violet, 'NONE')
 call s:GuiFor('Typedef', 'NONE', s:pink)
