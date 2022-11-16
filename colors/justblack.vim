@@ -209,6 +209,7 @@ call s:GuiFor('cssSelectorOp', 'NONE', s:cyan)
 call s:GuiFor('cssSelectorOp2', 'NONE', s:cyan)
 call s:GuiFor('cssColor', 'NONE', s:orange)
 call s:GuiFor('cssUnitDecorators', 'NONE', s:orange)
+call s:GuiFor('cssDefinition', 'NONE', s:red)
 
 
 
@@ -284,6 +285,8 @@ elseif exists('*term_setansicolors')
     \ s:magenta,
     \ s:cyan,
     \ s:white,
+    \ s:purple,
+    \ s:yellow,
     \ s:black,
     \ s:red,
     \ s:green,
@@ -293,5 +296,7 @@ elseif exists('*term_setansicolors')
     \ s:magenta,
     \ s:blue,
     \ s:white,
+    \ s:purple,
+    \ s:yellow,
     \ ]
 endif
