@@ -1,14 +1,8 @@
-" --------------------------------------------------------------------------
-"  
-"
 "  Name: Just Black Theme for Neovim
 "  Author: Santhosh Pai <techtuner284@gmail.com>
 "  Site: https://github.com/techtuner/justblack-neovim
 "  License: MIT
-"
-"
-"  -------------------------------------------------------------------------
-"
+
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
@@ -44,6 +38,7 @@ let s:background = s:black
 let s:foreground = s:white
 let s:accent = s:white
 let s:grey_ui = '#666666'
+let s:yellow = '#FFFF7E'
 let s:red = '#FF3B3B'
 let s:green = '#7FFF00'
 let s:violet = '#BB77FF'
@@ -65,7 +60,7 @@ call s:GuiFor('Normal','None', s:foreground)
 " --------------------------------------------------
 call s:GuiFor('Constant', 'NONE', s:pink)
 call s:GuiFor('Keyword', 'NONE', s:pink)
-call s:GuiFor('Number', 'NONE', s:pink)
+call s:GuiFor('Number', 'NONE', s:yellow)
 call s:GuiFor('Repeat', 'NONE', s:pink)
 call s:GuiFor('Special', 'NONE', s:pink)
 call s:GuiFor('SpecialKey', 'NONE', s:pink)
@@ -78,7 +73,7 @@ call s:GuiFor('Typedef', 'NONE', s:pink)
 " --------------------------------------------------
 " Functions, classes, object literal keys, violet
 " --------------------------------------------------
-call s:GuiFor('Function', 'NONE', s:violet)
+call s:GuiFor('Function', 'NONE', s:green)
 call s:GuiFor('Directory', 'NONE', s:violet)
 call s:GuiFor('PreProc', 'NONE', s:violet)
 call s:GuiFor('StorageClass', 'NONE', s:violet)
@@ -87,10 +82,10 @@ call s:GuiFor('StorageClass', 'NONE', s:violet)
 " Constants, operators, orange
 " --------------------------------------------------
 call s:GuiFor('Conditional', 'NONE', s:orange)
-call s:GuiFor('Exception', 'NONE', s:orange)
-call s:GuiFor('Include', 'NONE', s:orange)
-call s:GuiFor('Define', 'NONE', s:orange)
-call s:GuiFor('Macro', 'NONE', s:orange)
+call s:GuiFor('Exception', 'NONE', s:red)
+call s:GuiFor('Include', 'NONE', s:red)
+call s:GuiFor('Define', 'NONE', s:blue)
+call s:GuiFor('Macro', 'NONE', s:blue)
 call s:GuiFor('Operator', 'NONE', s:orange)
 call s:GuiFor('PreCondit', 'NONE', s:orange)
 
@@ -101,11 +96,11 @@ call s:GuiFor('PreCondit', 'NONE', s:orange)
 call s:GuiFor('String', 'NONE', s:green)
 call s:GuiFor('Debug', 'NONE', s:green)
 call s:GuiFor('Delimiter', 'NONE', s:green)
-call s:GuiFor('DiffChange', 'NONE', s:green, 'NONE')
+call s:GuiFor('DiffChange', 'NONE', s:yellow, 'NONE')
 call s:GuiFor('Label', 'NONE', s:green)
 call s:GuiFor('MoreMsg', 'NONE', s:green)
 call s:GuiFor('Title', 'NONE', s:green, 'NONE')
-call s:GuiFor('Todo', 'NONE', s:green)
+call s:GuiFor('Todo', 'NONE', s:purple)
 
 call s:GuiFor('GitGutterChange', 'NONE', s:green)
 
@@ -117,7 +112,7 @@ call s:GuiFor('MatchParen', s:orange, s:background)
 " --------------------------------------------------
 call s:GuiFor('Identifier ', 'NONE', s:foreground)
 call s:GuiFor('SpecialChar', 'NONE', s:blue)
-call s:GuiFor('DiffAdd', 'NONE', s:blue)
+call s:GuiFor('DiffAdd', 'NONE', s:green)
 
 call s:GuiFor('Conceal', 'NONE', s:blue, 'NONE')
 call s:GuiFor('lispKey', 'NONE', s:blue)
@@ -140,7 +135,7 @@ call s:GuiFor('DiffDelete', 'NONE', s:red, 'NONE')
 call s:GuiFor('DiffText', 'NONE', s:red, 'NONE')
 call s:GuiFor('GitGutterChangeREDete', 'NONE', s:red)
 call s:GuiFor('GitGutterREDete', 'NONE', s:red)
-call s:GuiFor('WarningMsg', 'NONE', s:yellow)
+call s:GuiFor('WarningMsg', 'NONE', s:orange)
 call s:GuiFor('Question', 'NONE', s:red, 'NONE')
 
 " --------------------------------------------------
@@ -191,28 +186,31 @@ call s:GuiFor('shQuote', 'NONE', s:green)
 " CSS
 " --------------------------------------------------
 
-call s:GuiFor('cssClassName', 'NONE', s:pink)
-call s:GuiFor('cssClassNameDot', 'NONE', s:pink)
-call s:GuiFor('cssColor', 'NONE', s:orange)
-call s:GuiFor('cssBorderProp', 'NONE', s:blue)
-call s:GuiFor('cssBoxProp', 'NONE', s:blue)
-call s:GuiFor('cssBackgroundProp', 'NONE', s:white)
-call s:GuiFor('cssPseudoClassId', 'NONE', s:pink)
+call s:GuiFor('cssClassName', 'NONE', s:yellow)
+call s:GuiFor('cssClassNameDot', 'NONE', s:yellow)
+call s:GuiFor('cssStringQ', 'NONE', s:magenta)
+call s:GuiFor('cssStringQQ', 'NONE', s:magenta)
+call s:GuiFor('cssFunctionName', 'NONE', s:green)
+call s:GuiFor('cssTagName', 'NONE', s:red)
 call s:GuiFor('cssBraces', 'NONE', s:foreground)
-call s:GuiFor('cssFlexibleBoxProp', 'NONE', s:blue)
-call s:GuiFor('cssFontProp', 'NONE', s:blue)
-call s:GuiFor('cssIdentifier ', 'NONE', s:blue)
-call s:GuiFor('cssImportant', 'NONE', s:red)
-call s:GuiFor('cssMediaProp', 'NONE', s:blue)
-call s:GuiFor('cssPositioningProp', 'NONE', s:blue)
-call s:GuiFor('cssTagName', 'NONE', s:pink)
-call s:GuiFor('cssTextProp', 'NONE', s:blue)
-call s:GuiFor('cssUIProp', 'NONE', s:blue)
-call s:GuiFor('cssAttr', 'NONE', s:pink)
-call s:GuiFor('cssIncludeKeyword ', 'NONE', s:pink)
-call s:GuiFor('cssUnitDecorators', 'NONE', s:)
-call s:GuiFor('cssStringQ', 'NONE', s:green)
-call s:GuiFor('cssStringQQ', 'NONE', s:green)
+call s:GuiFor('cssPseudoClassId', 'NONE', s:purple)
+call s:GuiFor('cssProp', 'NONE', s:white)
+call s:GuiFor('cssMediaType', 'NONE', s:red)
+call s:GuiFor('cssIncludeKeyword ', 'NONE', s:red)
+call s:GuiFor('cssInclude', 'NONE', s:red)
+call s:GuiFor('cssIdentifier ', 'NONE', s:cyan)
+call s:GuiFor('cssAttrComma', 'NONE', s:cyan)
+call s:GuiFor('cssImportant', 'NONE', s:orange)
+call s:GuiFor('cssAttributeSelector', 'NONE', s:pink)
+call s:GuiFor('cssFontAttr', 'NONE', s:pink)
+call s:GuiFor('cssFontDescription', 'NONE', s:pink)
+call s:GuiFor('cssDefinition', 'NONE', s:pink)
+call s:GuiFor('cssSelectorOp', 'NONE', s:cyan)
+call s:GuiFor('cssSelectorOp2', 'NONE', s:cyan)
+call s:GuiFor('cssColor', 'NONE', s:orange)
+call s:GuiFor('cssUnitDecorators', 'NONE', s:orange)
+
+
 
 
 " --------------------------------------------------
