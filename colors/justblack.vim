@@ -58,16 +58,16 @@ call s:GuiFor('Normal','None', s:foreground)
 " --------------------------------------------------
 " Keywords, constants, template literals, pink
 " --------------------------------------------------
-call s:GuiFor('Constant', 'NONE', s:cyan)
-call s:GuiFor('Keyword', 'NONE', s:blue)
+call s:GuiFor('Constant', 'NONE', s:pink)
+call s:GuiFor('Keyword', 'NONE', s:pink)
 call s:GuiFor('Number', 'NONE', s:yellow)
-call s:GuiFor('Repeat', 'NONE', s:orange)
+call s:GuiFor('Repeat', 'NONE', s:pink)
 call s:GuiFor('Special', 'NONE', s:pink)
 call s:GuiFor('SpecialKey', 'NONE', s:pink)
-call s:GuiFor('Statement', 'NONE', s:white)
+call s:GuiFor('Statement', 'NONE', s:pink)
 call s:GuiFor('Tag', 'NONE', s:pink)
-call s:GuiFor('Type', 'NONE', s:violet, 'NONE')
-call s:GuiFor('Typedef', 'NONE', s:pink)
+call s:GuiFor('Type', 'NONE', s:blue, 'NONE')
+call s:GuiFor('Typedef', 'NONE', s:grey_ui)
 
 
 " --------------------------------------------------
@@ -86,7 +86,7 @@ call s:GuiFor('Exception', 'NONE', s:red)
 call s:GuiFor('Include', 'NONE', s:red)
 call s:GuiFor('Define', 'NONE', s:blue)
 call s:GuiFor('Macro', 'NONE', s:blue)
-call s:GuiFor('Operator', 'NONE', s:orange)
+call s:GuiFor('Operator', 'NONE', s:white)
 call s:GuiFor('PreCondit', 'NONE', s:orange)
 
 
@@ -100,7 +100,7 @@ call s:GuiFor('DiffChange', 'NONE', s:yellow, 'NONE')
 call s:GuiFor('Label', 'NONE', s:green)
 call s:GuiFor('MoreMsg', 'NONE', s:green)
 call s:GuiFor('Title', 'NONE', s:green, 'NONE')
-call s:GuiFor('Todo', 'NONE', s:purple)
+call s:GuiFor('Todo', 'NONE', s:violet)
 
 call s:GuiFor('GitGutterChange', 'NONE', s:green)
 
@@ -193,7 +193,7 @@ call s:GuiFor('cssStringQQ', 'NONE', s:magenta)
 call s:GuiFor('cssFunctionName', 'NONE', s:green)
 call s:GuiFor('cssTagName', 'NONE', s:red)
 call s:GuiFor('cssBraces', 'NONE', s:foreground)
-call s:GuiFor('cssPseudoClassId', 'NONE', s:purple)
+call s:GuiFor('cssPseudoClassId', 'NONE', s:violet)
 call s:GuiFor('cssProp', 'NONE', s:white)
 call s:GuiFor('cssMediaType', 'NONE', s:red)
 call s:GuiFor('cssIncludeKeyword ', 'NONE', s:red)
@@ -218,7 +218,7 @@ call s:GuiFor('cssDefinition', 'NONE', s:red)
 " HTML
 " --------------------------------------------------
 
-call s:GuiFor('htmlArg', 'NONE', s:purple)
+call s:GuiFor('htmlArg', 'NONE', s:violet)
 call s:GuiFor('htmlString', 'NONE', s:magenta)
 call s:GuiFor('htmlTagName', 'NONE', s:cyan)
 call s:GuiFor('htmlTag', 'NONE', s:red)
@@ -285,8 +285,6 @@ elseif exists('*term_setansicolors')
     \ s:magenta,
     \ s:cyan,
     \ s:white,
-    \ s:purple,
-    \ s:yellow,
     \ s:black,
     \ s:red,
     \ s:green,
@@ -296,7 +294,5 @@ elseif exists('*term_setansicolors')
     \ s:magenta,
     \ s:blue,
     \ s:white,
-    \ s:purple,
-    \ s:yellow,
     \ ]
 endif
