@@ -90,7 +90,7 @@ call s:GuiFor('SpecialChar', 'NONE', s:light_cyan)
 call s:GuiFor('Delimiter', 'NONE', s:light_cyan)
 call s:GuiFor('Tag', 'NONE', s:pink) " Not Done yet
 call s:GuiFor('SpecialComment', 'NONE',s:magenta,'italic')
-call s:GuiFor('Underlined', 'NONE','NONE','underlined')
+call s:GuiFor('Underlined', 'NONE','NONE','underline')
 call s:GuiFor('Error', 'NONE',s:red)
 call s:GuiFor('Directory', 'NONE', s:white)
 call s:GuiFor('Todo', 'NONE', s:orange,'bold')
