@@ -93,7 +93,11 @@ call s:GuiFor('SpecialComment', 'NONE',s:magenta,'italic')
 call s:GuiFor('Error', 'NONE',s:red)
 call s:GuiFor('Directory', 'NONE', s:white)
 call s:GuiFor('Todo', 'NONE', s:orange,'bold')
-
+call s:GuiFor('Cursor ', 'NONE', s:background)
+call s:GuiFor('lCursor ', 'NONE', s:background)
+call s:GuiFor('CursorLine ', s:grey)
+call s:GuiFor('CursorLineNr', 'NONE', s:white)
+call s:GuiFor('ColorColumn', 'NONE', s:dark_grey)
 
 
 
@@ -157,10 +161,7 @@ call s:GuiFor('Question', 'NONE', s:red, 'NONE')
 " Modified highlights (mod) cyan
 " --------------------------------------------------
 call s:GuiFor('SignColumn ', 'NONE', s:cyan)
-call s:GuiFor('Cursor ', 'NONE', s:background)
-call s:GuiFor('lCursor ', 'NONE', s:background)
-call s:GuiFor('CursorLine ', s:grey)
-call s:GuiFor('CursorLineNr', 'NONE', s:white)
+
 
 " --------------------------------------------------
 " Complex                                          -
