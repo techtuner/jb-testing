@@ -344,7 +344,8 @@ theme.set_highlights = function()
 
     -- CSS
     hl(0, "cssClassName", { fg = c.yellow, bg = 'NONE', italic = true })
-    hl(0, "cssIdName", { fg = c.purple, bg = 'NONE', italic = true })
+    hl(0, "cssClassNameDot", { fg = c.yellow, bg = 'NONE', italic = true })
+    hl(0, "cssId", { fg = c.purple, bg = 'NONE', italic = true })
     hl(0, "cssPseudoClassId", { fg = c.purple, bg = 'NONE', italic = true })
     hl(0, "cssAttributeSelector", { fg = c.purple, bg = 'NONE' })
     hl(0, "cssImportant", { fg = c.yellow_orange, bg = 'NONE' })
