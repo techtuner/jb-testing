@@ -1,0 +1,5 @@
+-- Lualine Support
+
+local colors ={
+
+}
