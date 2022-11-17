@@ -32,6 +32,8 @@ endfunction
 
 " Color Pallete
 
+" TODO : Choose color using the color pciker from powertoys
+
 let s:black = '#000000'
 let s:white = '#F2F2F2'
 let s:background = s:black
@@ -43,11 +45,11 @@ let s:red = '#FF3B3B'
 let s:green = '#7FFF00'
 let s:violet = '#BB77FF'
 let s:orange = '#FC6A0F' 
-let s:blue = '#0077FF'
-let s:cyan = '#7EFFFF'
+let s:blue = '#3375f6'
+let s:cyan = '#00FFFF'
 let s:pink = '#FF1493'
 let s:magenta = s:pink
-let s:light_grey = s:grey_ui
+let s:light_cyan = '#75fbfd'
 let s:grey = '#888888'
 let s:dark_grey = '#333333'
 
@@ -58,49 +60,64 @@ call s:GuiFor('Normal','None', s:foreground)
 " --------------------------------------------------
 " Keywords, constants, template literals, pink
 " --------------------------------------------------
-call s:GuiFor('Constant', 'NONE', s:pink)
-call s:GuiFor('Keyword', 'NONE', s:pink)
+call s:GuiFor('Comment', 'NONE',s:magenta, "italic")
+call s:GuiFor('Constant', 'NONE', s:white)
+call s:GuiFor('String', 'NONE', s:pink)
+call s:GuiFor('Character', 'NONE', s:cyan,'bold')
 call s:GuiFor('Number', 'NONE', s:yellow)
-call s:GuiFor('Repeat', 'NONE', s:pink)
-call s:GuiFor('Special', 'NONE', s:pink)
-call s:GuiFor('SpecialKey', 'NONE', s:pink)
-call s:GuiFor('Statement', 'NONE', s:pink)
-call s:GuiFor('Tag', 'NONE', s:pink)
+call s:GuiFor('Boolean', 'NONE',s:light_cyan)
+call s:GuiFor('Float', 'NONE', s:yellow)
+call s:GuiFor('Identifier', 'NONE', s:white)
+call s:GuiFor('Function', 'NONE', s:green,'italic')
+call s:GuiFor('Statement', 'NONE', s:light_cyan)
+call s:GuiFor('Conditional', 'NONE', s:orange,'italic')
+call s:GuiFor('Repeat', 'NONE', s:magenta,'italic')
+call s:GuiFor('Label', 'NONE',s:orange,'italic')
+call s:GuiFor('Operator', 'NONE',s:yellow,'bold')
+call s:GuiFor('Keyword', 'NONE', s:blue)
+call s:GuiFor('Exception', 'NONE', s:red)
+call s:GuiFor('PreProc', 'NONE', s:white)
+call s:GuiFor('Include', 'NONE', s:red)
+call s:GuiFor('Define', 'NONE', s:blue,'italic')
+call s:GuiFor('Macro', 'NONE', s:blue,'italic')
+call s:GuiFor('PreCondit', 'NONE', s:cyan)
 call s:GuiFor('Type', 'NONE', s:blue, 'NONE')
-call s:GuiFor('Typedef', 'NONE', s:grey_ui)
+call s:GuiFor('StorageClass', 'NONE', s:red)
+call s:GuiFor('Structure', 'NONE', s:blue, 'NONE')
+call s:GuiFor('Typedef', 'NONE', s:yellow)
+call s:GuiFor('Special', 'NONE', s:light_cyan)
+call s:GuiFor('SpecialChar', 'NONE', s:light_cyan)
+call s:GuiFor('Delimiter', 'NONE', s:light_cyan)
+call s:GuiFor('Tag', 'NONE', s:pink) " Not Done yet
+call s:GuiFor('SpecialComment', 'NONE',s:magenta,'italic')
+call s:GuiFor('Error', 'NONE',s:red)
+call s:GuiFor('Directory', 'NONE', s:white)
+call s:GuiFor('Todo', 'NONE', s:orange,'bold')
+
+
 
 
 " --------------------------------------------------
 " Functions, classes, object literal keys, violet
 " --------------------------------------------------
-call s:GuiFor('Function', 'NONE', s:green)
-call s:GuiFor('Directory', 'NONE', s:violet)
-call s:GuiFor('PreProc', 'NONE', s:violet)
-call s:GuiFor('StorageClass', 'NONE', s:violet)
+call s:GuiFor('SpecialKey', 'NONE', s:pink)
+
 
 " --------------------------------------------------
 " Constants, operators, orange
 " --------------------------------------------------
-call s:GuiFor('Conditional', 'NONE', s:orange)
-call s:GuiFor('Exception', 'NONE', s:red)
-call s:GuiFor('Include', 'NONE', s:red)
-call s:GuiFor('Define', 'NONE', s:blue)
-call s:GuiFor('Macro', 'NONE', s:blue)
+
 call s:GuiFor('Operator', 'NONE', s:white)
-call s:GuiFor('PreCondit', 'NONE', s:orange)
+
 
 
 " --------------------------------------------------
 " Strings, markdown headings, green
 " --------------------------------------------------
-call s:GuiFor('String', 'NONE', s:green)
 call s:GuiFor('Debug', 'NONE', s:green)
-call s:GuiFor('Delimiter', 'NONE', s:green)
 call s:GuiFor('DiffChange', 'NONE', s:yellow, 'NONE')
-call s:GuiFor('Label', 'NONE', s:green)
 call s:GuiFor('MoreMsg', 'NONE', s:green)
 call s:GuiFor('Title', 'NONE', s:green, 'NONE')
-call s:GuiFor('Todo', 'NONE', s:violet)
 
 call s:GuiFor('GitGutterChange', 'NONE', s:green)
 
@@ -111,7 +128,6 @@ call s:GuiFor('MatchParen', s:orange, s:background)
 " Special keywords, classes, markdown code blocks, blue
 " --------------------------------------------------
 call s:GuiFor('Identifier ', 'NONE', s:foreground)
-call s:GuiFor('SpecialChar', 'NONE', s:blue)
 call s:GuiFor('DiffAdd', 'NONE', s:green)
 
 call s:GuiFor('Conceal', 'NONE', s:blue, 'NONE')
@@ -120,7 +136,7 @@ call s:GuiFor('lispKey', 'NONE', s:blue)
 " --------------------------------------------------
 " Status bar text, buttons, etc, grey
 " --------------------------------------------------
-call s:GuiFor('Comment', 'NONE', s:light_grey, "italic")
+
 call s:GuiFor('NonText', 'NONE', s:grey)
 call s:GuiFor('LineNr', 'NONE', s:grey)
 call s:GuiFor('StatusLine', '', '', 'reverse')
@@ -129,7 +145,6 @@ call s:GuiFor('StatusLineNC', '', '', 'reverse')
 " --------------------------------------------------
 " Deletion highlights, errors, warnings, red
 " --------------------------------------------------
-call s:GuiFor('Error', 'NONE', s:red)
 call s:GuiFor('ErrorMsg', 'NONE', s:red)
 call s:GuiFor('DiffDelete', 'NONE', s:red, 'NONE')
 call s:GuiFor('DiffText', 'NONE', s:red, 'NONE')
