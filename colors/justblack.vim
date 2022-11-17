@@ -48,21 +48,15 @@ let s:orange = '#FC6A0F'
 let s:blue = '#3375f6'
 let s:cyan = '#00FFFF'
 let s:pink = '#FF1493'
-let s:magenta = s:pink
+let s:magenta = '#EB41B7'
 let s:light_cyan = '#75fbfd'
 let s:grey = '#888888'
 let s:dark_grey = '#333333'
 
-
 call s:GuiFor('Normal','None', s:foreground)
-
-
-" --------------------------------------------------
-" Keywords, constants, template literals, pink
-" --------------------------------------------------
-call s:GuiFor('Comment', 'NONE',s:magenta, "italic")
+call s:GuiFor('Comment', 'NONE',s:pink, "italic")
 call s:GuiFor('Constant', 'NONE', s:white)
-call s:GuiFor('String', 'NONE', s:pink)
+call s:GuiFor('String', 'NONE', s:magenta)
 call s:GuiFor('Character', 'NONE', s:cyan,'bold')
 call s:GuiFor('Number', 'NONE', s:yellow)
 call s:GuiFor('Boolean', 'NONE',s:light_cyan)
@@ -88,8 +82,8 @@ call s:GuiFor('Typedef', 'NONE', s:yellow)
 call s:GuiFor('Special', 'NONE', s:light_cyan)
 call s:GuiFor('SpecialChar', 'NONE', s:light_cyan)
 call s:GuiFor('Delimiter', 'NONE', s:light_cyan)
-call s:GuiFor('Tag', 'NONE', s:pink) " Not Done yet
-call s:GuiFor('SpecialComment', 'NONE',s:magenta,'italic')
+call s:GuiFor('Tag', 'NONE', s:red)
+call s:GuiFor('SpecialComment', 'NONE',s:orange,'italic')
 call s:GuiFor('Underlined', 'NONE','NONE','underline')
 call s:GuiFor('Error', 'NONE',s:red)
 call s:GuiFor('Directory', 'NONE', s:white)
@@ -138,15 +132,15 @@ call s:GuiFor('GitGutterREDete', 'NONE', s:red)
 call s:GuiFor('Visual', s:grey_ui)
 call s:GuiFor('NonText', 'NONE', s:cyan)
 call s:GuiFor('StatusLine', s:backgroud, s:foreground, 'reverse')
-call s:GuiFor('StatusLineNC', s:backgroud, s:foreground, 'reverse')
+call s:GuiFor('StatusLineNC', s:background, s:foreground, 'reverse')
 call s:GuiFor('Question', 'NONE', s:red, 'NONE')
 call s:GuiFor('SpellBad', 'NONE',s:red, 'underline')
-
+call s:GuiFor('SpellCap', 'NONE',s:yellow, 'underline')
 
 " --------------------------------------------------
 " Modified highlights (mod) cyan
 " --------------------------------------------------
-call s:GuiFor('SignColumn ', 'NONE', s:cyan)
+call s:GuiFor('  ', 'NONE', s:cyan)
 
 
 " --------------------------------------------------
