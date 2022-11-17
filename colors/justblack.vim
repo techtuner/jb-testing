@@ -8,7 +8,7 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
 endif
 
 highlight clear
-if exists('syntax on')
+if !exists('syntax on')
   syntax reset
 endif
 
