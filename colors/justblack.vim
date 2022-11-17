@@ -183,12 +183,22 @@ call s:GuiFor('cssDefinition', 'NONE', s:red)
 " HTML
 " --------------------------------------------------
 
-call s:GuiFor('htmlArg', 'NONE', s:violet)
+call s:GuiFor('htmlArg', 'NONE', s:violet,'italic')
 call s:GuiFor('htmlString', 'NONE', s:magenta)
-call s:GuiFor('htmlTagName', 'NONE', s:cyan)
-call s:GuiFor('htmlTag', 'NONE', s:red)
-call s:GuiFor('htmlTagEndTag', 'NONE', s:red)
+call s:GuiFor('htmlH1','NONE',s:red)
+call s:GuiFor('htmlH2','NONE',s:red)
+call s:GuiFor('htmlH3','NONE',s:red)
+call s:GuiFor('htmlH4','NONE',s:red)
+call s:GuiFor('htmlH5','NONE',s:red)
+call s:GuiFor('htmlH6','NONE',s:red)
+call s:GuiFor('htmlTagName', 'NONE', s:red)
+call s:GuiFor('htmlSpecialTagName', 'NONE', s:red)
+call s:GuiFor('htmlTagN', 'NONE', s:red)
+call s:GuiFor('htmlTag', 'NONE', s:cyan)
+call s:GuiFor('htmlLink','NONE',s:magenta,'italic')
+call s:GuiFor('htmlEndTag', 'NONE', s:cyan)
 call s:GuiFor('htmlEvent', 'NONE', s:orange)
+call s:GuiFor('htmlTitle', 'NONE', s:white)
 
 
 " --------------------------------------------------
