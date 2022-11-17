@@ -96,6 +96,19 @@ call s:GuiFor('Directory', 'NONE', s:white)
 call s:GuiFor('Todo', 'NONE', s:orange,'bold')
 call s:GuiFor('Cursor ', 'NONE', s:background)
 call s:GuiFor('lCursor ', 'NONE', s:background)
+call s:GuiFor('VertSplit', s:grey_ui, 'NONE')
+call s:GuiFor('Pmenu', s:background, s:foreground)
+call s:GuiFor('PmenuSbar', s:grey)
+call s:GuiFor('PmenuBorder', s:grey)
+call s:GuiFor('PmenuSel', 'NONE', s:white)
+call s:GuiFor('PmenuThumb', s:grey, s:orange)
+call s:GuiFor('WildMenu', s:blue, s:background)
+call s:GuiFor('Terminal', s:background, s:foreground)
+call s:GuiFor('TabLine', 'NONE', s:foreground, 'NONE')
+call s:GuiFor('TabLineFill', 'NONE', 'NONE', 'NONE')
+call s:GuiFor('TabLineSel', s:background, s:foreground, 'NONE')
+call s:GuiFor('IncSearch', s:grey, 'NONE')
+call s:GuiFor('Search', s:grey, 'NONE')
 call s:GuiFor('CursorLine ', s:grey)
 call s:GuiFor('CursorLineNr', 'NONE', s:white)
 call s:GuiFor('ColorColumn', 'NONE', s:dark_grey)
@@ -118,33 +131,17 @@ call s:GuiFor('EndOfBuffer', 'NONE',s:grey_ui)
 call s:GuiFor('LineNr', 'NONE', s:grey)
 call s:GuiFor('Folded', s:black, s:grey_ui)
 call s:GuiFor('FoldColumn', 'NONE')
-
-
-
-
 call s:GuiFor('GitGutterChange', 'NONE', s:yellow)
 call s:GuiFor('GitGutterAdd', 'NONE', s:green)
 call s:GuiFor('GitGutterChangeREDete', 'NONE', s:red)
 call s:GuiFor('GitGutterREDete', 'NONE', s:red)
 call s:GuiFor('Visual', s:grey_ui)
 call s:GuiFor('NonText', 'NONE', s:cyan)
-
-
-
-call s:GuiFor('lispKey', 'NONE', s:blue)
-
-" --------------------------------------------------
-" Status bar text, buttons, etc, grey
-" --------------------------------------------------
-
-call s:GuiFor('StatusLine', '', '', 'reverse')
-call s:GuiFor('StatusLineNC', '', '', 'reverse')
-
-" --------------------------------------------------
-" Deletion highlights, errors, warnings, red
-" --------------------------------------------------
-
+call s:GuiFor('StatusLine', s:backgroud, s:foreground, 'reverse')
+call s:GuiFor('StatusLineNC', s:backgroud, s:foreground, 'reverse')
 call s:GuiFor('Question', 'NONE', s:red, 'NONE')
+call s:GuiFor('SpellBad', 'NONE',s:red, 'underline')
+
 
 " --------------------------------------------------
 " Modified highlights (mod) cyan
@@ -155,23 +152,6 @@ call s:GuiFor('SignColumn ', 'NONE', s:cyan)
 " --------------------------------------------------
 " Complex                                          -
 " --------------------------------------------------
-call s:GuiFor('VertSplit', s:grey, s:background)
-
-call s:GuiFor('Pmenu', s:black, s:foreground)
-call s:GuiFor('PmenuSbar', s:grey)
-call s:GuiFor('PmenuBorder', s:grey)
-call s:GuiFor('PmenuSel', 'NONE', s:white)
-call s:GuiFor('PmenuThumb', s:grey, s:orange)
-
-call s:GuiFor('WildMenu', s:cyan, s:background)
-
-
-call s:GuiFor('TabLine', 'NONE', s:foreground, 'NONE')
-call s:GuiFor('TabLineFill', 'NONE', 'NONE', 'NONE')
-call s:GuiFor('TabLineSel', s:background, s:foreground, 'NONE')
-
-call s:GuiFor('IncSearch', s:grey, 'NONE')
-call s:GuiFor('Search', s:grey, 'NONE')
 
 " --------------------------------------------------
 " sh                                               -
