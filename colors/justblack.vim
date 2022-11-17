@@ -90,6 +90,7 @@ call s:GuiFor('SpecialChar', 'NONE', s:light_cyan)
 call s:GuiFor('Delimiter', 'NONE', s:light_cyan)
 call s:GuiFor('Tag', 'NONE', s:pink) " Not Done yet
 call s:GuiFor('SpecialComment', 'NONE',s:magenta,'italic')
+call s:GuiFor('Underlined', 'NONE','NONE','underlined')
 call s:GuiFor('Error', 'NONE',s:red)
 call s:GuiFor('Directory', 'NONE', s:white)
 call s:GuiFor('Todo', 'NONE', s:orange,'bold')
@@ -99,62 +100,50 @@ call s:GuiFor('CursorLine ', s:grey)
 call s:GuiFor('CursorLineNr', 'NONE', s:white)
 call s:GuiFor('ColorColumn', 'NONE', s:dark_grey)
 
-
-
-" --------------------------------------------------
-" Functions, classes, object literal keys, violet
-" --------------------------------------------------
-call s:GuiFor('SpecialKey', 'NONE', s:pink)
-
-
-" --------------------------------------------------
-" Constants, operators, orange
-" --------------------------------------------------
-
-call s:GuiFor('Operator', 'NONE', s:white)
-
-
-
-" --------------------------------------------------
-" Strings, markdown headings, green
-" --------------------------------------------------
-call s:GuiFor('Debug', 'NONE', s:green)
 call s:GuiFor('DiffChange', 'NONE', s:yellow, 'NONE')
-call s:GuiFor('MoreMsg', 'NONE', s:green)
+call s:GuiFor('DiffAdd', 'NONE', s:green, 'NONE')
+call s:GuiFor('DiffDelete', 'NONE', s:red, 'NONE')
+call s:GuiFor('Difftext', 'NONE', s:cyan, 'NONE')
+call s:GuiFor('SpecialKey', 'NONE', s:red)
+" TODO might be wrong!!!
+call s:GuiFor('MatchParen', s:grey, s:white,'underline')
 call s:GuiFor('Title', 'NONE', s:green, 'NONE')
-
-call s:GuiFor('GitGutterChange', 'NONE', s:green)
-
-call s:GuiFor('MatchParen', s:orange, s:background)
-
-
-" --------------------------------------------------
-" Special keywords, classes, markdown code blocks, blue
-" --------------------------------------------------
-call s:GuiFor('Identifier ', 'NONE', s:foreground)
-call s:GuiFor('DiffAdd', 'NONE', s:green)
-
+call s:GuiFor('Debug', 'NONE', s:green)
+call s:GuiFor('ModeMsg', 'NONE', s:white)
+call s:GuiFor('MoreMsg', 'NONE', s:green)
+call s:GuiFor('ErrorMsg', 'NONE', s:red)
+call s:GuiFor('WarningMsg', 'NONE', s:yellow)
 call s:GuiFor('Conceal', 'NONE', s:blue, 'NONE')
+call s:GuiFor('EndOfBuffer', 'NONE',s:grey_ui)
+call s:GuiFor('LineNr', 'NONE', s:grey)
+call s:GuiFor('Folded', s:black, s:grey_ui)
+call s:GuiFor('FoldColumn', 'NONE')
+
+
+
+
+call s:GuiFor('GitGutterChange', 'NONE', s:yellow`)
+call s:GuiFor('GitGutterAdd', 'NONE', s:green)
+call s:GuiFor('GitGutterChangeREDete', 'NONE', s:red)
+call s:GuiFor('GitGutterREDete', 'NONE', s:red)
+call s:GuiFor('Visual', s:grey_ui)
+call s:GuiFor('NonText', 'NONE', s:cyan)
+
+
+
 call s:GuiFor('lispKey', 'NONE', s:blue)
 
 " --------------------------------------------------
 " Status bar text, buttons, etc, grey
 " --------------------------------------------------
 
-call s:GuiFor('NonText', 'NONE', s:grey)
-call s:GuiFor('LineNr', 'NONE', s:grey)
 call s:GuiFor('StatusLine', '', '', 'reverse')
 call s:GuiFor('StatusLineNC', '', '', 'reverse')
 
 " --------------------------------------------------
 " Deletion highlights, errors, warnings, red
 " --------------------------------------------------
-call s:GuiFor('ErrorMsg', 'NONE', s:red)
-call s:GuiFor('DiffDelete', 'NONE', s:red, 'NONE')
-call s:GuiFor('DiffText', 'NONE', s:red, 'NONE')
-call s:GuiFor('GitGutterChangeREDete', 'NONE', s:red)
-call s:GuiFor('GitGutterREDete', 'NONE', s:red)
-call s:GuiFor('WarningMsg', 'NONE', s:orange)
+
 call s:GuiFor('Question', 'NONE', s:red, 'NONE')
 
 " --------------------------------------------------
@@ -166,7 +155,6 @@ call s:GuiFor('SignColumn ', 'NONE', s:cyan)
 " --------------------------------------------------
 " Complex                                          -
 " --------------------------------------------------
-call s:GuiFor('Visual', s:grey)
 call s:GuiFor('VertSplit', s:grey, s:background)
 
 call s:GuiFor('Pmenu', s:black, s:foreground)
@@ -177,14 +165,10 @@ call s:GuiFor('PmenuThumb', s:grey, s:orange)
 
 call s:GuiFor('WildMenu', s:cyan, s:background)
 
+
 call s:GuiFor('TabLine', 'NONE', s:foreground, 'NONE')
 call s:GuiFor('TabLineFill', 'NONE', 'NONE', 'NONE')
 call s:GuiFor('TabLineSel', s:background, s:foreground, 'NONE')
-
-call s:GuiFor('Folded', s:black, s:foreground)
-call s:GuiFor('FoldColumn', 'NONE', s:foreground)
-
-call s:GuiFor('GitGutterAdd', 'NONE', s:pink)
 
 call s:GuiFor('IncSearch', s:grey, 'NONE')
 call s:GuiFor('Search', s:grey, 'NONE')
