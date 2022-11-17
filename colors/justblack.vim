@@ -122,7 +122,7 @@ call s:GuiFor('FoldColumn', 'NONE')
 
 
 
-call s:GuiFor('GitGutterChange', 'NONE', s:yellow`)
+call s:GuiFor('GitGutterChange', 'NONE', s:yellow)
 call s:GuiFor('GitGutterAdd', 'NONE', s:green)
 call s:GuiFor('GitGutterChangeREDete', 'NONE', s:red)
 call s:GuiFor('GitGutterREDete', 'NONE', s:red)
