@@ -8,10 +8,12 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
 endif
 
 highlight clear
-if !exists('syntax on')
+
+if exists('syntax on')
   syntax reset
 endif
 
+set t_Co=256
 
 let g:colors_name = 'justblack'
 set background=dark
@@ -112,7 +114,6 @@ call s:GuiFor('DiffAdd', 'NONE', s:green, 'NONE')
 call s:GuiFor('DiffDelete', 'NONE', s:red, 'NONE')
 call s:GuiFor('Difftext', 'NONE', s:cyan, 'NONE')
 call s:GuiFor('SpecialKey', 'NONE', s:red)
-" TODO might be wrong!!!
 call s:GuiFor('MatchParen', s:grey, s:white,'underline')
 call s:GuiFor('Title', 'NONE', s:green, 'NONE')
 call s:GuiFor('Debug', 'NONE', s:green)
@@ -159,7 +160,7 @@ call s:GuiFor('cssFunctionName', 'NONE', s:green)
 call s:GuiFor('cssTagName', 'NONE', s:red)
 call s:GuiFor('cssBraces', 'NONE', s:foreground)
 call s:GuiFor('cssPseudoClassId', 'NONE', s:violet)
-call s:GuiFor('cssProp', 'NONE', s:white)
+call s:GuiFor('cssProp', 'NONE', s:light_grey)
 call s:GuiFor('cssMediaType', 'NONE', s:red)
 call s:GuiFor('cssIncludeKeyword ', 'NONE', s:red)
 call s:GuiFor('cssInclude', 'NONE', s:red)
