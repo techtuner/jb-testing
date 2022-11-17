@@ -133,19 +133,10 @@ call s:GuiFor('Visual', s:grey_ui)
 call s:GuiFor('NonText', 'NONE', s:cyan)
 call s:GuiFor('StatusLine', s:background, s:foreground, 'reverse')
 call s:GuiFor('StatusLineNC', s:background, s:foreground, 'reverse')
-call s:GuiFor('Question', 'NONE', s:red, 'NONE')
+call s:GuiFor('Question', 'NONE', s:yellow, 'NONE')
 call s:GuiFor('SpellBad', 'NONE',s:red, 'underline')
 call s:GuiFor('SpellCap', 'NONE',s:yellow, 'underline')
 
-" --------------------------------------------------
-" Modified highlights (mod) cyan
-" --------------------------------------------------
-call s:GuiFor('  ', 'NONE', s:cyan)
-
-
-" --------------------------------------------------
-" Complex                                          -
-" --------------------------------------------------
 
 " --------------------------------------------------
 " sh                                               -
