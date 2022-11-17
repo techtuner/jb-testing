@@ -1,5 +1,5 @@
 -- Lualine Support
 
-local colors ={
+local colors = {
 
 }

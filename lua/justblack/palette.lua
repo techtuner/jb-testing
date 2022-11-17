@@ -31,7 +31,8 @@ local colors = {
   sign_change   = "#82aaff",
   sign_delete   = "#ff5370",
   line          = "#1D1F27",
-  light_cyan    = "#5face3"
+  light_cyan    = "#5face3",
+  context       = "#6C6F93"
 
 }
 return colors
