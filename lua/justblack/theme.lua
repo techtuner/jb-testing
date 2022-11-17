@@ -348,6 +348,7 @@ theme.set_highlights = function()
     hl(0, "cssIdentifier", { fg = c.purple, bg = 'NONE', italic = true })
     hl(0, "cssPseudoClassId", { fg = c.purple, bg = 'NONE', italic = true })
     hl(0, "cssAttributeSelector", { fg = c.purple, bg = 'NONE' })
+    hl(0, "cssAttrComma", { fg = c.cyan, bg = 'NONE' })
     hl(0, "cssImportant", { fg = c.yellow_orange, bg = 'NONE', bold = true })
     hl(0, "cssTagName", { fg = c.yellow_orange, bg = 'NONE', italic = true })
     hl(0, "cssProps", { fg = c.white, bg = 'NONE', italic = true })
@@ -372,8 +373,6 @@ theme.set_highlights = function()
     hl(0, "htmlH4", { fg = c.red, bg = 'NONE' })
     hl(0, "htmlH5", { fg = c.red, bg = 'NONE' })
     hl(0, "htmlH6", { fg = c.red, bg = 'NONE' })
-
-
 
     -- StatusLine
     hl(0, "StatusLine", { fg = c.white, bg = c.bg })
