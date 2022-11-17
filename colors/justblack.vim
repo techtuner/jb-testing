@@ -172,7 +172,7 @@ call s:GuiFor('Pmenu', s:black, s:foreground)
 call s:GuiFor('PmenuSbar', s:grey)
 call s:GuiFor('PmenuBorder', s:grey)
 call s:GuiFor('PmenuSel', 'NONE', s:white)
-call s:GuiFor('PmenuThumb', s:light_grey, s:orange)
+call s:GuiFor('PmenuThumb', s:grey, s:orange)
 
 call s:GuiFor('WildMenu', s:cyan, s:background)
 
@@ -185,8 +185,8 @@ call s:GuiFor('FoldColumn', 'NONE', s:foreground)
 
 call s:GuiFor('GitGutterAdd', 'NONE', s:pink)
 
-call s:GuiFor('IncSearch', s:light_grey, 'NONE')
-call s:GuiFor('Search', s:light_grey, 'NONE')
+call s:GuiFor('IncSearch', s:grey, 'NONE')
+call s:GuiFor('Search', s:grey, 'NONE')
 
 " --------------------------------------------------
 " sh                                               -
